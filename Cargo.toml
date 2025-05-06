@@ -1,0 +1,8 @@
+[package]
+name = "conjoined_compilation_multiprocess_model"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+argh = "0.1.13"
+bevy = {version = "0.16.0", features = ["bevy_remote"]}
