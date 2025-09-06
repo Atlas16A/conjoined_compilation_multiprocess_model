@@ -9,16 +9,16 @@ use editor::EditorPlugin;
 
 fn main() {
     let args = argh::from_env::<Args>();
+    let mut app = App::new();
     if args.editor_mode {
         println!("Running in editor mode");
-        App::new().add_plugins(EditorPlugin).run();
+        app.add_plugins(EditorPlugin);
     } else {
         println!("Running in game mode");
-        App::new()
-            .add_plugins(GamePlugin)
-            .add_plugins(RemotePlugin::default())
-            .run();
+        app.add_plugins(GamePlugin)
+            .add_plugins(RemotePlugin::default());
     }
+    app.run();
 }
 
 #[derive(FromArgs)]

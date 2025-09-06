@@ -42,7 +42,7 @@ fn setup(
     });
 }
 
-#[derive(Component)]
+#[derive(Component, Reflect)]
 pub struct Cube;
 
 #[derive(Resource)]

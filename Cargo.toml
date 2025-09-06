@@ -5,4 +5,4 @@ edition = "2024"
 
 [dependencies]
 argh = "0.1.13"
-bevy = {version = "0.16.0", features = ["bevy_remote"]}
+bevy = {git = "https://github.com/bevyengine/bevy.git", rev = "a036b6568e2a0f295e4235003475f4686801b3b5", features = ["bevy_remote"]}
